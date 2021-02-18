@@ -147,3 +147,96 @@ ________________________________________________________________________
 	Code: 404 NOT FOUND 
 	Content: 
 	~~~ { error : "Movie not found" }  ~~~
+
+________________________________________________________________________
+
+**Update information a movie to the API (UPDATE):**
+
+- URL 
+
+	"/movie/id” 
+
+- Method: 
+
+	PUT
+
+- URL Params 
+
+	Required:
+	~~~
+	id=[integer]
+	~~~
+
+- JSON Params
+
+	Required:
+		~~~
+		title=[string]
+		year=[integer]
+		director=[string]
+		category=[string]
+		storyline=[text]
+		~~~
+
+- Success Response: 
+
+		Code: 200 
+		Content: 
+		~~~
+		{ "Sucessfully": "Movie update!" }
+		~~~
+
+- Error Response:  
+
+		Code: 400 BAD REQUEST
+		Content: 
+		~~~
+		{ Check invalid fields: + "Here will appear the parameters that are invalid" } 
+		~~~
+
+	OR
+
+		Code: 404 NOT FOUND
+		Content: 
+		~~~
+		{Error: "Movie not found"}
+		~~~
+________________________________________________________________________
+
+**Delete a movie to the API (DELETE):**
+
+- URL 
+
+	"/movie/id” 
+
+- Method: 
+
+	DELETE
+
+- URL Params 
+
+	Required:
+	~~~
+	id=[integer]
+	~~~
+
+- Success Response: 
+
+	Code: 200 
+	Content: "Successfully deleted"
+
+	Error Response:  
+
+	Code: 400 BAD REQUEST
+	Content: 
+	~~~
+	{ Error: There was an error deleting }
+	~~~
+
+		OR
+
+	Code: 404 NOT FOUND
+	Content: 
+	~~~
+	{Error: "Movie not found"}
+	~~~
