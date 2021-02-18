@@ -102,3 +102,49 @@ ________________________________________________________________________
 	{ Error : "Storyline invalid" }
 	{ Error : "One or more invalid parameters!" } 
 ~~~
+
+
+________________________________________________________________________
+
+**Returns information about a movie by its id (READ):**
+
+- URL 
+
+	"/movie/id” 
+
+- Method: 
+
+	GET 
+
+- URL Params 
+
+	Required:
+~~~
+	id=[integer]
+~~~
+
+- Success Response: 
+
+	Code: 200 
+	Content:
+	~~~
+	 { 
+	    "title": "Interstellar", 
+	    "year": 2014,
+	    "director": "Christopher Nolan", 
+	    "category": "Adventure, Drama, Sci-Fi", 
+	    "storyline": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life." 
+	} 
+~~~
+
+- Error Response:  
+
+	Code: 400 BAD REQUEST
+	Content: 
+	~~~ { error : "ID is not a number" } ~~~
+
+	OR 
+
+	Code: 404 NOT FOUND 
+	Content: 
+	~~~ { error : "Movie not found" }  ~~~
