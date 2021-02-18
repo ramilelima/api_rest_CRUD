@@ -18,7 +18,7 @@ connection
         console.log(err);
     })
 
-app.get("/", (req, res) => {
+app.get("/movies", (req, res) => {
     var movie = Movie.findAll().then(movies => {
         { movies: movies }
         res.status(200).json(movies);
@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 app.get("/movie/:id", (req, res) => {
     var idParam = req.params.id;
     if (isNaN(idParam)) {
-        res.status(400).json({Error: "Bad Request"});
+        res.status(400).json({Error: "ID is not a number"});
     } else {
         var id = parseInt(idParam);
         var movie = Movie.findByPk(id).then(movies => {
@@ -38,7 +38,7 @@ app.get("/movie/:id", (req, res) => {
             if (movies != null) {             
                 res.status(200).json(movies);
             } else {
-                res.status(404).json({Error: "Not Found"});
+                res.status(404).json({Error: "Movie not found"});
             }
         });
     }
@@ -72,7 +72,7 @@ app.post("/movie", (req, res) => {
     } else {
         Movie.create({ title: title, year: year, director: director, category: category, storyline: storyline 
         }).then(() => {
-            res.status(200).json({ title, year, director, category, storyline });
+            res.status(200).json({"Sucessfully": "Movie added!" });
         })
     }
 });
@@ -88,7 +88,7 @@ app.put("/movie/:id", (req, res) => {
                 var {title, year, director, category, storyline} = req.body;
 
                 if (title == undefined || title.length < 3 || title == "") {
-                    var titleValid = "Title invalid or incompleted";
+                    var titleValid = "Title invalid";
                 }
                 if (isNaN(year)) {
                     var yearValid = "Year invalid";
@@ -110,11 +110,11 @@ app.put("/movie/:id", (req, res) => {
                             id: id
                         }
                     }).then(() => {
-                        res.status(200).json({ title, year, director, category, storyline });
+                        res.status(200).json({ "Sucessfully": "Movie update!" });
                     });
                 }
             } else {
-                res.status(404).json({Error: "Not Found"});
+                res.status(404).json({Error: "Movie not found"});
             }
         });
     }
@@ -131,7 +131,7 @@ app.delete("/movie/:id", (req, res, next) => {
             }).then(() => {
                 res.status(200).json("Successfully deleted");
             }).catch(() => {
-                res.status(400).json({Error: "Bad Request"});
+                res.status(400).json({Error: "There was an error deleting"});
             })
         } else {
             res.status(404).json({Error: "Not Found"});
