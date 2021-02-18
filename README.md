@@ -101,8 +101,7 @@ ________________________________________________________________________
 	{ Error : "Category invalid" }
 	{ Error : "Storyline invalid" }
 	{ Error : "One or more invalid parameters!" } 
-~~~
-
+	~~~
 
 ________________________________________________________________________
 
@@ -135,7 +134,7 @@ ________________________________________________________________________
 	    "category": "Adventure, Drama, Sci-Fi", 
 	    "storyline": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life." 
 	} 
-~~~
+	~~~
 
 - Error Response:  
 
