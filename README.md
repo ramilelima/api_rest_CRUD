@@ -145,14 +145,15 @@ ________________________________________________________________________
 ~~~
         { 
           error : "ID is not a number" 
-        } 
- 
-~~~
-	Code: 404 NOT FOUND
-	Content:
+       	}	 
+~~~ 
+
+Code: 404 NOT FOUND
+Content:
+	
 ~~~ 
         { 
-          error : "Movie not found" 
+           error : "Movie not found" 
         }  
 ~~~
 
@@ -179,39 +180,39 @@ ________________________________________________________________________
 
 	Required:
 ~~~
-		title=[string]
-		year=[integer]
-		director=[string]
-		category=[string]
-		storyline=[text]
+	title=[string]
+	year=[integer]
+	director=[string]
+	category=[string]
+	storyline=[text]
 ~~~
 
 - Success Response: 
 
-		Code: 200 
-		Content: 
+	Code: 200 
+	Content: 
 ~~~
-		{ 
-                  "Sucessfully": "Movie update!" 
-                }
+	{ 
+           "Sucessfully": "Movie update!" 
+        }
 ~~~
 
 - Error Response:  
 
-		Code: 400 BAD REQUEST
-		Content: 
+	Code: 400 BAD REQUEST
+	Content: 
 ~~~
-		{ 
-                  Check invalid fields: + "Here will appear the parameters that are invalid" 
-                } 
+	{ 
+           Check invalid fields: + "Here will appear the parameters that are invalid" 
+        } 
 ~~~
 
-		Code: 404 NOT FOUND
-		Content: 
+Code: 404 NOT FOUND
+Content: 
 ~~~
-		{
-                  Error: "Movie not found"
-                }
+	{
+           Error: "Movie not found"
+        }
 ~~~
 
 ________________________________________________________________________
@@ -229,9 +230,9 @@ ________________________________________________________________________
 - URL Params 
 
 	Required:
-	~~~
+~~~
 	id=[integer]
-	~~~
+~~~
 
 - Success Response: 
 
@@ -253,10 +254,15 @@ ________________________________________________________________________
         }
 ~~~
 
-	Code: 404 NOT FOUND
-	Content: 
+Code: 404 NOT FOUND
+Content: 
 ~~~
 	{
           Error: "Movie not found"
         }
 ~~~
+
+## All the storylines and movie information presented here, were obtained from the website: ##
+
+&nbsp;
+[https://www.imdb.com/]
