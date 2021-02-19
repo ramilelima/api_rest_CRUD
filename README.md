@@ -237,9 +237,14 @@ ________________________________________________________________________
 - Success Response: 
 
 	Code: 200 
-	Content: "Successfully deleted"
+	Content: 
+        ~~~
+        {
+          "Successfully deleted"
+        }
+        ~~~
 
-	Error Response:  
+- Error Response:  
 
 	Code: 400 BAD REQUEST
 	Content: 
