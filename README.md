@@ -73,13 +73,13 @@ ________________________________________________________________________
 - JSON Params 
 
 	Required:
-                ~~~
-		title=[string]
-		year=[integer]
-		director=[string]
-		category=[string]
-		storyline=[text]
-                ~~~
+        ~~~
+          title=[string]
+          year=[integer]
+	  director=[string]
+	  category=[string]
+          storyline=[text]
+         ~~~
 
 - Success Response: 
 
