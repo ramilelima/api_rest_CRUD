@@ -140,16 +140,16 @@ ________________________________________________________________________
 
 - Error Response:  
 
-	_Code: 400 BAD REQUEST_
-	_Content:_
+	Code: 400 BAD REQUEST
+	Content:
 ~~~
         { 
           error : "ID is not a number" 
         } 
  
 ~~~
-	_Code: 404 NOT FOUND_
-	_Content:_
+	Code: 404 NOT FOUND
+	Content:
 ~~~ 
         { 
           error : "Movie not found" 
