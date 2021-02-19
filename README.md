@@ -48,11 +48,11 @@ ________________________________________________________________________
    
    Code: 500 INTERNAL SERVER ERROR 
    Content: 
-   ~~~
-   { 
-	   error : "API unavailable"
-   }
-   ~~~
+~~~
+{ 
+    error : "API unavailable"
+}
+~~~
 
 ________________________________________________________________________
 
@@ -73,36 +73,36 @@ ________________________________________________________________________
 - JSON Params 
 
 	Required:
-        ~~~
+~~~
           title=[string]
           year=[integer]
 	  director=[string]
 	  category=[string]
           storyline=[text]
-         ~~~
+~~~
 
 - Success Response: 
 
 	Code: 200 
 	Content: 
-        ~~~
+~~~
         { 
 	  "Sucessfully": "Movie added!" 
         }
-        ~~~
+~~~
 
 - Error Response:  
 
 	Code: 400 BAD REQUEST
 	Content: 
-	~~~
+~~~
 	{ Error : "Title invalid" }
 	{ Error : "Year invalid" }
 	{ Error : "Director invalid" }
 	{ Error : "Category invalid" }
 	{ Error : "Storyline invalid" }
 	{ Error : "One or more invalid parameters!" } 
-	~~~
+~~~
 
 ________________________________________________________________________
 
@@ -119,15 +119,16 @@ ________________________________________________________________________
 - URL Params 
 
 	Required:
-        ~~~
+~~~
 	 id=[integer]
-        ~~~
+~~~
 
 - Success Response: 
 
 	Code: 200 
 	Content:
-	~~~
+	
+~~~
 	{ 
 	    "title": "Interstellar", 
 	    "year": 2014,
@@ -135,25 +136,26 @@ ________________________________________________________________________
 	    "category": "Adventure, Drama, Sci-Fi", 
 	    "storyline": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life." 
 	} 
-	~~~
+~~~
 
 - Error Response:  
 
 	Code: 400 BAD REQUEST
 	Content: 
-	~~~
+~~~
         { 
           error : "ID is not a number" 
         } 
-        ~~~
+ 
+~~~
 
 	Code: 404 NOT FOUND 
 	Content: 
-	~~~ 
+~~~ 
         { 
           error : "Movie not found" 
         }  
-        ~~~
+~~~
 
 ________________________________________________________________________
 
@@ -170,48 +172,49 @@ ________________________________________________________________________
 - URL Params 
 
 	Required:
-	~~~
+~~~
 	id=[integer]
-	~~~
+~~~
 
 - JSON Params
 
 	Required:
-		~~~
+~~~
 		title=[string]
 		year=[integer]
 		director=[string]
 		category=[string]
 		storyline=[text]
-		~~~
+~~~
 
 - Success Response: 
 
 		Code: 200 
 		Content: 
-		~~~
+~~~
 		{ 
                   "Sucessfully": "Movie update!" 
                 }
-		~~~
+~~~
 
 - Error Response:  
 
 		Code: 400 BAD REQUEST
 		Content: 
-		~~~
+~~~
 		{ 
                   Check invalid fields: + "Here will appear the parameters that are invalid" 
                 } 
-		~~~
+~~~
 
 		Code: 404 NOT FOUND
 		Content: 
-		~~~
+~~~
 		{
                   Error: "Movie not found"
                 }
-		~~~
+~~~
+
 ________________________________________________________________________
 
 **Delete a movie to the API (DELETE):**
@@ -235,26 +238,26 @@ ________________________________________________________________________
 
 	Code: 200 
 	Content: 
-        ~~~
+~~~
         {
           "Successfully deleted"
         }
-        ~~~
+~~~
 
 - Error Response:  
 
 	Code: 400 BAD REQUEST
 	Content: 
-	~~~
+~~~
 	{ 
           Error: There was an error deleting 
         }
-	~~~
+~~~
 
 	Code: 404 NOT FOUND
 	Content: 
-	~~~
+~~~
 	{
           Error: "Movie not found"
         }
-	~~~
+~~~
