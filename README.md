@@ -140,13 +140,21 @@ ________________________________________________________________________
 
 	Code: 400 BAD REQUEST
 	Content: 
-	~~~ { error : "ID is not a number" } ~~~
+	~~~
+        { 
+          error : "ID is not a number" 
+        } 
+        ~~~
 
 	OR 
 
 	Code: 404 NOT FOUND 
 	Content: 
-	~~~ { error : "Movie not found" }  ~~~
+	~~~ 
+        { 
+          error : "Movie not found" 
+        }  
+        ~~~
 
 ________________________________________________________________________
 
@@ -183,7 +191,9 @@ ________________________________________________________________________
 		Code: 200 
 		Content: 
 		~~~
-		{ "Sucessfully": "Movie update!" }
+		{ 
+                  "Sucessfully": "Movie update!" 
+                }
 		~~~
 
 - Error Response:  
@@ -191,7 +201,9 @@ ________________________________________________________________________
 		Code: 400 BAD REQUEST
 		Content: 
 		~~~
-		{ Check invalid fields: + "Here will appear the parameters that are invalid" } 
+		{ 
+                  Check invalid fields: + "Here will appear the parameters that are invalid" 
+                } 
 		~~~
 
 	OR
@@ -199,7 +211,9 @@ ________________________________________________________________________
 		Code: 404 NOT FOUND
 		Content: 
 		~~~
-		{Error: "Movie not found"}
+		{
+                  Error: "Movie not found"
+                }
 		~~~
 ________________________________________________________________________
 
@@ -230,7 +244,9 @@ ________________________________________________________________________
 	Code: 400 BAD REQUEST
 	Content: 
 	~~~
-	{ Error: There was an error deleting }
+	{ 
+          Error: There was an error deleting 
+        }
 	~~~
 
 		OR
@@ -238,5 +254,7 @@ ________________________________________________________________________
 	Code: 404 NOT FOUND
 	Content: 
 	~~~
-	{Error: "Movie not found"}
+	{
+          Error: "Movie not found"
+        }
 	~~~
