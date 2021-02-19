@@ -27,8 +27,8 @@ ________________________________________________________________________
 	   Content:  
 ~~~
 { 
-	"title": "Star Wars: Episode V - The Empire Strikes Back", 
-	"year": 1980,
+   "title": "Star Wars: Episode V - The Empire Strikes Back", 
+   "year": 1980,
    "director": "Irvin Kershner", 
    "category": "Action, Adventure, Fantasy", 
    "storyline": "Luke Skywalker, Han Solo, Princess Leia and Chewbacca face attack by the Imperial forces and its AT-AT walkers on the ice planet Hoth. While Han and Leia escape in the Millennium Falcon, Luke travels to Dagobah in search of Yoda. Only with the Jedi Master's help will Luke survive when the Dark Side of the Force beckons him into the ultimate duel with Darth Vader."  
@@ -73,22 +73,23 @@ ________________________________________________________________________
 - JSON Params 
 
 	Required:
-
+                ~~~
 		title=[string]
 		year=[integer]
 		director=[string]
 		category=[string]
 		storyline=[text]
+                ~~~
 
 - Success Response: 
 
 	Code: 200 
 	Content: 
-~~~
-{ 
-	"Sucessfully": "Movie added!" 
-}
-~~~
+        ~~~
+        { 
+	  "Sucessfully": "Movie added!" 
+        }
+        ~~~
 
 - Error Response:  
 
@@ -118,16 +119,16 @@ ________________________________________________________________________
 - URL Params 
 
 	Required:
-~~~
-	id=[integer]
-~~~
+        ~~~
+	 id=[integer]
+        ~~~
 
 - Success Response: 
 
 	Code: 200 
 	Content:
 	~~~
-	 { 
+	{ 
 	    "title": "Interstellar", 
 	    "year": 2014,
 	    "director": "Christopher Nolan", 
@@ -145,8 +146,6 @@ ________________________________________________________________________
           error : "ID is not a number" 
         } 
         ~~~
-
-	OR 
 
 	Code: 404 NOT FOUND 
 	Content: 
@@ -206,8 +205,6 @@ ________________________________________________________________________
                 } 
 		~~~
 
-	OR
-
 		Code: 404 NOT FOUND
 		Content: 
 		~~~
@@ -253,8 +250,6 @@ ________________________________________________________________________
           Error: There was an error deleting 
         }
 	~~~
-
-		OR
 
 	Code: 404 NOT FOUND
 	Content: 
