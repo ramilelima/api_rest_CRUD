@@ -1,6 +1,3 @@
-# api_rest_nodejs_mysql
-
-
 **Rest API for movie information, such as title, year of release, director, category and storyline.** 
 ________________________________________________________________________
 
